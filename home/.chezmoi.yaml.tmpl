@@ -1,0 +1,6 @@
+{{- $name := "Leyton Addison-Roach" -}}
+{{- $email := promptStringOnce . "email" "Email address" -}}
+
+data:
+    name: "{{ $name }}"
+    email: "{{ $email }}"
