@@ -15,7 +15,7 @@
     "files.associations": {
         "*_bash_profile": "shellscript",
         "*_bashrc": "shellscript",
-        "*_gitconfig.tmpl": "properties",
-        "config": "ssh_config"
+        "config": "ssh_config",
+        "config.tmpl": "properties"
     }
 }
