@@ -2,5 +2,12 @@
 {{- $email := promptStringOnce . "email" "Email address" -}}
 
 data:
-    name: "{{ $name }}"
-    email: "{{ $email }}"
+  name: "{{ $name }}"
+  email: "{{ $email }}"
+
+interpreters:
+  ps1:
+    command: powershell
+    args:
+      - -ExecutionPolicy
+      - Bypass

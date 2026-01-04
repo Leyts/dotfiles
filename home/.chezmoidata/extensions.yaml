@@ -1,0 +1,19 @@
+extensions:
+  vscode:
+    - catppuccin.catppuccin-vsc
+    - charliermarsh.ruff
+    - davidanson.vscode-markdownlint
+    - editorconfig.editorconfig
+    - mhutchie.git-graph
+    - miguelsolorio.fluent-icons
+    - ms-python.debugpy
+    - ms-python.python
+    - ms-python.vscode-pylance
+    - ms-python.vscode-python-envs
+    - ms-vscode-remote.remote-ssh-edit
+    - peterfh.linesinfostatusbar
+    - pkief.material-icon-theme
+    - redhat.vscode-yaml
+    - tamasfe.even-better-toml
+    - timonwong.shellcheck
+    - yzhang.markdown-all-in-one

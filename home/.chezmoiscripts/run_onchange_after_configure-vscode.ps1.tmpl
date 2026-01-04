@@ -1,0 +1,11 @@
+$installed = code --list-extensions
+
+$missing = @(
+{{- range .extensions.vscode }}
+    "{{ . }}"
+{{- end }}
+) | Where-Object { $installed -notcontains $_ }
+
+foreach ($ext in $missing) {
+    code --install-extension $ext
+}
