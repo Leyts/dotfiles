@@ -1,5 +1,11 @@
 # shellcheck shell=bash
 
+if [ -f "$HOME/.bashrc" ]; then
+    # shellcheck source=./dot_bashrc
+    . "$HOME/.bashrc"
+fi
+
 export EDITOR='code --wait'
 export PROMPT_COMMAND='history -a'
-eval "$(oh-my-posh init bash --config ~/.config/oh-my-posh/oh-my-posh.omp.yaml)"
+
+eval "$(oh-my-posh init bash --config "$HOME/.config/oh-my-posh/oh-my-posh.omp.yaml")"
