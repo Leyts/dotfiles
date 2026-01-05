@@ -2,27 +2,32 @@ $schema: https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes
 version: 4
 final_space: true
 
+palette:
+  blue: "#89B4FA"
+  closer: "#ACB0BE"
+  lavender: "#B7BDF8"
+  pink: "#F5BDE6"
+
 blocks:
   - type: prompt
     alignment: left
     segments:
       - type: path
         style: plain
-        foreground: "#61AFEF"
+        foreground: p:lavender
         template: "{{ .Path }} "
         options:
           style: full
+          folder_separator_icon: "/"
 
       - type: git
         style: plain
-        foreground: "#98C379"
-        template: "on \ue725 {{ .HEAD }} "
-
-      - type: status
-        style: plain
-        foreground: "#56B6C2"
-        foreground_templates:
-          - "{{ if gt .Code 0 }}#E06C75{{ end }}"
-        template: "{{ if gt .Code 0 }}✗{{ else }}✓{{ end }} "
+        foreground: p:pink
+        template: "<p:blue>git:(</>{{ .HEAD }}<p:blue>)</> "
         options:
-          always_enabled: true
+          branch_icon: ""
+
+      - type: text
+        style: plain
+        foreground: p:closer
+        template: 
